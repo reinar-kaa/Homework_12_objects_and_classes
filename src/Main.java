@@ -3,9 +3,12 @@ public class Main {
         Book book = new Book("Dreamcatcher", "Stephen King", 2001);
         Book book2 = new Book("Animal Farm: A Fairy Story", "George Orwell", 1945);
         Book book3 = new Book("Recipes for happiness", "Elchin Safarli", 2013);
-        System.out.println("book.bookName = " + book.bookName);
-        System.out.println("book2.author = " + book2.author);
+        System.out.println("book.bookName = " + book.getBookName());
+        System.out.println("book2.author = " + book2.getAuthor());
         System.out.println("book3.publicationYear = " + book3.publicationYear);
+        book2.setPublicationYear(1969);
+        System.out.println("book2.getPublicationYear() = " + book2.getPublicationYear());
+
 
         Author author = new Author("Stephen", "King");
         Author author1 = new Author("George", "Orwell");
