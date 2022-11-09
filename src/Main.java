@@ -1,20 +1,30 @@
 public class Main {
     public static void main(String[] args) {
-        Book book = new Book("Dreamcatcher", "Stephen King", 2001);
-        Book book2 = new Book("Animal Farm: A Fairy Story", "George Orwell", 1945);
-        Book book3 = new Book("Recipes for happiness", "Elchin Safarli", 2013);
-        System.out.println("book.bookName = " + book.getBookName());
-        System.out.println("book2.author = " + book2.getAuthor());
-        System.out.println("book3.publicationYear = " + book3.publicationYear);
-        book2.setPublicationYear(1969);
-        System.out.println("book2.getPublicationYear() = " + book2.getPublicationYear());
-
-
-        Author author = new Author("Stephen", "King");
-        Author author1 = new Author("George", "Orwell");
-        Author author2 = new Author("Elchin", "Safarli");
-        System.out.println("author.authorName = " + author.getAuthorName());
-        System.out.println("author1.getAuthorSurname() = " + author1.getAuthorSurname());
+        Author firstAuthor = new Author("Stephen", "King");
+        Author secondAuthor = new Author("Jeorge", "Orwell");
+        Book firstBook = new Book("Dreamcatcher", firstAuthor, 2001);
+        Book secondBook = new Book("Animal Farm: A Fairy Story", secondAuthor, 1945);
+        secondBook.setPublicationYear(1969);
+        System.out.println("secondBook.getPublicationYear() = " + secondBook.getPublicationYear());
+        System.out.println("firstBook.allInfo() = " + firstBook.allInfo());
+        System.out.println("secondBook.allInfo() = " + secondBook.allInfo());
     }
-
 }
+
+    //1. Необходимо создать класс Book, который содержит в себе данные об имени, авторе и годе публикации.
+    // Типы полей должны быть String, Author (который мы создадим  в п. 2) и int.
+    //2. Необходимо создать класс Author, который содержит в себе данные об имени и фамилии автора.
+    //3. Написать конструкторы для обоих классов, заполняющие все поля.
+    //4. Создать геттеры для всех полей автора и всех полей книги.
+    //5. Создать сеттер для поля «Год публикации» у книги.
+    //6. В методе main создать несколько объектов Книга (достаточно двух) и несколько объектов Автор (достаточно тоже двух)
+    // и инициализировать друг друга. Учесть, что авторы являются обязательными членами книг и книги не могут создаться без авторов.
+    //    Метод main не должен находиться в классах Book и Author.
+    //    Требуется создать отдельный класс для запуска приложения и объявить метод main в нем.
+    //7. В том же методе main изменить год публикации одной из книг с помощью сеттера.
+    //- **Критерии оценки**
+    //    1. Классы созданы корректно.
+    //    2. Поля созданы корректно. Использованы корректные имена и типы.
+    //    3. Классы корректно создаются через конструктор.
+    //    4. Классы имеют все необходимые геттеры и сеттеры.
+    //    5. Объекты в методе main созданы.
